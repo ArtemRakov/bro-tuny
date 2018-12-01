@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_01_122541) do
+ActiveRecord::Schema.define(version: 2018_12_01_125807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,11 +45,11 @@ ActiveRecord::Schema.define(version: 2018_12_01_122541) do
     t.string "title"
     t.datetime "end_date"
     t.string "photo"
-    t.boolean "finish"
     t.string "description"
     t.bigint "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 0
     t.index ["house_id"], name: "index_stages_on_house_id"
   end
 
@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 2018_12_01_122541) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "house_id"
+    t.string "telegram"
+    t.string "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["house_id"], name: "index_users_on_house_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
