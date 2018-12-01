@@ -1,0 +1,59 @@
+
+
+@font-face {
+    font-family: FontAwesome; /* имя шрифта для CSS правил */
+    src: local("FontAwesome"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/fontawesome-webfont.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: Ubuntu-Regular; /* имя шрифта для CSS правил */
+    src: local("Ubuntu-Regular"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Ubuntu-Regular.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: Ubuntu-Bold; /* имя шрифта для CSS правил */
+    src: local("Ubuntu-Bold"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Ubuntu-Bold.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+
+
+@font-face {
+    font-family: Ubuntu-Light; /* имя шрифта для CSS правил */
+    src: local("Ubuntu-Light"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Ubuntu-Light.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+
+body{
+	margin: 0px auto;
+	font-family: Ubuntu-Light;
+	background: #eee;
+}
+
+.clear{
+	clear: both;
+}
+
+
+.content{
+    position: relative;
+    z-index: 5;
+    width: 960px;
+    margin: 0px auto;
+}
+
+
+.div_button_auth_header{
+    float: right;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #13c6f5;
+    color: #FFF;
+    line-height: 40px;
+    cursor: pointer;
+}

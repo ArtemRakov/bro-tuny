@@ -1,0 +1,129 @@
+.background{
+	position: fixed;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-image: url(/img/background.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+
+.logo{
+	height: 50px;
+	float: left;
+}
+
+header{
+	margin-top: 30px;
+}
+
+.background_opacity{
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+
+
+.background h1{
+	color: #444;
+	text-align: center;
+	margin-top: 100px;
+	font-family: Ubuntu-Regular; 
+}
+
+
+.logo_list{
+	display: flex;
+
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+.logo_list_point{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.logo_list_point img{
+	height: 50px;
+}
+
+
+
+.pop-up-auth{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(255,255,255,0.8);
+	z-index: 100;
+	display: none;
+}
+
+
+.pop-up-auth form{
+	width: 300px;
+	background: #FFF;
+	border-radius: 10px;
+	margin: 200px auto;
+	border: 1px solid #ddd;
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+	padding: 15px;
+}
+
+.pop-up-auth form input{
+	height: 30px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	width: calc(100% - 2px);
+	outline: inherit;
+	margin-top: 15px;
+	font-size: 14px;
+	text-indent: 10px;
+}
+.pop-up-auth form button{
+	height: 40px;
+	border-radius: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #13c6f5;
+	color: #FFF;
+	line-height: 40px;
+	cursor: pointer;
+	border: none;
+	width: 100%;
+	margin-top: 15px;
+	font-size: 16px;
+	outline: inherit;
+}
+
+
+
+.form_auth_title{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+
+.form_auth_close{
+	text-align: right;
+	cursor: pointer;
+	font-size: 14px;
+	color: #aaa;
+}
+
+
+
+
+
+
