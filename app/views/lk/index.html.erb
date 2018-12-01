@@ -8,6 +8,4 @@
 </header>
 
 
-<div class="content" id="dashboard">
-
-</div>
+<%= tag.div class: :wrapper_dashboard, id: :dashboard, data: { house: @house.to_json, house_complex: @house_complex.to_json, stages: @stages.to_json } %>

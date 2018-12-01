@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const app = new Vue({
           el: element,
           data: {
-
+            house: JSON.parse(element.dataset.house),
+            houseComplex: JSON.parse(element.dataset.houseComplex),
+            stages: JSON.parse(element.dataset.stages),
           },
-          template: "<Dashboard  />",
+          template: "<Dashboard :stages='stages' :house='house' :houseComplex='houseComplex'  />",
           components: { Dashboard }
       })
   }

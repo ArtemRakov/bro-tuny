@@ -10,17 +10,40 @@
   position: relative;
 }
 
-.progressbar li:before {
-  content: '';
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
-  border: 1px solid #ddd;
+// .progressbar li:before {
+//   content: '';
+//   width: 15px;
+//   height: 15px;
+//   line-height: 15px;
+//   border: 1px solid #ddd;
+//   display: block;
+//   text-align: center;
+//   margin: 0 auto 5px auto;
+//   border-radius: 50%;
+//   background-color: white;
+// }
+
+.progressbar_dot {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  order: 1px solid #ddd;
   display: block;
   text-align: center;
   margin: 0 auto 5px auto;
   border-radius: 50%;
   background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+
+.progressbar_dot_active {
+  background-color: green;
 }
 
 .progressbar li:after {
@@ -63,9 +86,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 27px;
   border-radius: 5px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
+
+
 
 .progressbar_active_tab:before {
   content: "";
