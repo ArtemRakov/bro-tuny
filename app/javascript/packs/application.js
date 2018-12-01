@@ -1,6 +1,7 @@
 import "bootstrap";
 import Vue from 'vue/dist/vue.esm'
 
+import 'animate.css/animate.min.css'
 
 import Dashboard from '../dashboard.vue'
 

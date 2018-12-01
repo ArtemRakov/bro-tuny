@@ -1,6 +1,6 @@
 .progressbar {
   display: flex;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 
 .progressbar li {
@@ -23,6 +23,7 @@
 //   background-color: white;
 // }
 
+
 .progressbar_dot {
   position: absolute;
   width: 17px;
@@ -43,7 +44,7 @@
 }
 
 .progressbar_dot_active {
-  background-color: green;
+  background-color: #10C66E;
 }
 
 .progressbar li:after {
@@ -63,41 +64,69 @@
 }
 
 .progressbar li.active {
-  color: green;
+  // color: #10C66E;
 }
 
 .progressbar li.active:before {
-  border-color: green;
-  background-color: green;
+  border-color: #10C66E;
+  background-color: #10C66E;
 }
 
 .progressbar li.active + li:after {
-  background-color: green;
+  background-color: #10C66E;
 }
 
+.progressbar_dot_orange {
+  background-color: #f7b032;
+}
+
+
+// .progressbar_active_tab {
+//   position: relative;
+//   height: 40px;
+//   width: 60%;
+//   background-color: white;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 27px;
+//   border-radius: 5px;
+//   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+// }
 
 .progressbar_active_tab {
-  position: relative;
-  height: 40px;
-  width: 60%;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 27px;
-  border-radius: 5px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 200px;
+    text-align: left;
+    transform: translate(-9%, -440%) rotate(-45deg);
+    z-index: -56;
+    white-space: nowrap;
 }
 
 
-
-.progressbar_active_tab:before {
-  content: "";
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid white;
+.progressbar_triangle {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid white;
   position: absolute;
-  top: -7px;
-};
+  top: 20px;
+  left: 50%;
+  margin-left: -20px;
+
+
+}
+
+
+// .progressbar_active_tab:before {
+//   content: "";
+//   border-left: 7px solid transparent;
+//   border-right: 7px solid transparent;
+//   border-bottom: 7px solid white;
+//   position: absolute;
+//   top: -7px;
+// };

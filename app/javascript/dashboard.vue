@@ -1,28 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <ul class="progressbar">
-        <!-- class="active" -->
-        <!-- <div class="progressbar_active_tab">  </div> -->
-        <li  :class="{ active: stage.status === 'done' }" :key="stage.id" v-for="stage in sortedStages"> 
-          <div  @mouseover="changeTab(stage)" :class="{ progressbar_dot_active: stage.status === 'done' }" class="progressbar_dot">  </div>
-          <div v-if="stage.id === activeTab.id" class="progressbar_active_tab"> {{ activeTab.title }}  </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="dashboard__info">
-      <div class="dashboard__main">
-        <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
-        <p class="dashboard__description"> {{ activeTab.description }}  </p>
+  <div class="wrapper_dashboard">
+    <div class="container">
+      <div>
+        <ul class="progressbar">
+          <li  :class="{ active: stage.status === 'done' }" :key="stage.id" v-for="stage in sortedStages"> 
+            <div @mouseover="changeTab(stage)"  :class="{ progressbar_dot_active: stage.status === 'done', progressbar_dot_orange: stage.status === 'active' }" class="progressbar_dot">  </div>
+            <div class="progressbar_active_tab"> {{ text_truncate(stage.title, 30) }}  </div>
+            <transition name="slide-fade">
+              <div v-if="stage.id === activeTab.id" class="progressbar_triangle" >  </div>
+            </transition>
+          </li>
+        </ul>
       </div>
-      <div class="dashboard__secondary">
-        <div class="dashboard__secondary-photo">
-        </div>
-        <div class="dashboard__secondary-photo-2">
-        </div>
+      <transition name="slide-fade" mode="out-in">
+        <div class="dashboard__info" :key="activeTab.id">
+          <div class="dashboard__main">
+            <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
+            <p class="dashboard__description"> {{ activeTab.description }}  </p>
+          </div>
+          <div class="dashboard__secondary">
+            <div class="dashboard__secondary-photo">
+            </div>
+            <div class="dashboard__secondary-photo-2">
+            </div>
+          </div>
+        </div>   
+      </transition> 
       </div>
-    </div>
   </div>
 </template>
 
@@ -32,7 +36,7 @@ export default {
   props: ['stages', 'house', 'houseComplex'],
   data() {
     return {
-      activeTab: this.stages.find(element => { return element.status === 'active' })
+      activeTab: this.stages.find(element => { return element.status === 'active' }),
     }
   },
   methods: {
@@ -42,6 +46,19 @@ export default {
       }
       else {
         this.activeTab = stage
+      }
+    },
+    text_truncate(str, length, ending) {
+      if (length == null) {
+        length = 100;
+      }
+      if (ending == null) {
+        ending = '...';
+      }
+      if (str.length > length) {
+        return str.substring(0, length - ending.length) + ending;
+      } else {
+        return str;
       }
     }
   },
@@ -59,3 +76,7 @@ export default {
   }
 }
 </script>
+
+
+
+

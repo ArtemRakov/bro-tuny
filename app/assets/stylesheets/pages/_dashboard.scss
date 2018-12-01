@@ -1,8 +1,8 @@
 .dashboard {
   &__info {
-    min-height: 65vh;
+    min-height: 70vh;
     background-color: white;
-    margin-top: 30px;
+    margin-top: 40px;
     border-radius: 5px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     display: flex;
@@ -46,6 +46,20 @@
 }
 
 .wrapper_dashboard {
-  min-height: calc(100vh - 50px);
-  background-color: #F5F6FA;
+  min-height: calc(120vh - 50px);
+  // background-color: #F5F6FA;
 }
+
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
