@@ -28,7 +28,7 @@
     border-left: 1px solid #F5F6FA;
     &-photo {
       background-image: url('http://alau.kz/wp-content/uploads/2015/10/76bb22b747fbbe98822a35812baa2fa0.jpg');
-      height: 50%;
+      height: 100%;
       background-size: cover;
       background-position: center;
     }
@@ -59,16 +59,17 @@
   // background-color: #F5F6FA;
 }
 
-
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
+.fade-enter {
   opacity: 0;
 }
+.fade-enter-active {
+  transition: opacity .3s ease;
+}
+.fade-leave-active {
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+// .fade-enter, .fade-leave-to
+// /* .slide-fade-leave-active below version 2.1.8 */ {
+// }
 

@@ -15,4 +15,30 @@ header{
 	margin-top: 15px;
 	display: block;
 	text-decoration: none;
+	transition: all .3s;
+	border: 1px solid transparent;
+}
+
+.div_button_auth_header:hover {
+	text-decoration: none;
+	background-color: white;
+	color: ##13C6F5;
+	border: 1px solid #13C6F5;
+}
+
+.content-lk {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-right-side {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-link {
+	margin-bottom: 0;
+	margin-left: 20px;
+	margin-top: 15px;
 }

@@ -6,7 +6,7 @@
           <li  :class="{ active: stage.status === 'done' }" :key="stage.id" v-for="stage in sortedStages"> 
             <div @mouseover="changeTab(stage)"  :class="{ progressbar_dot_active: stage.status === 'done', progressbar_dot_orange: stage.status === 'active' }" class="progressbar_dot">  </div>
             <div class="progressbar_active_tab"> {{ text_truncate(stage.title, 30) }}  </div>
-            <transition name="slide-fade">
+            <transition name="fade" mode="out-in">
               <div v-if="stage.id === activeTab.id" class="progressbar_triangle" >  </div>
             </transition>
           </li>
@@ -14,8 +14,7 @@
       </div>
 
 
-      <!-- <div class="dashboard__bottom"> -->
-        <transition name="slide-fade" mode="out-in">
+        <transition name="fade" mode="out-in">
           <div class="dashboard__info" :key="activeTab.id">
             <div class="dashboard__main">
               <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
@@ -24,20 +23,9 @@
             <div class="dashboard__secondary">
               <div class="dashboard__secondary-photo">
               </div>
-              <div class="dashboard__secondary-photo-2">
-              </div>
             </div>
           </div>   
         </transition> 
-        <!-- <div class="dashboard__secondary-info">
-          <div class="dashboard__graph">
-
-          </div>
-          <div class="dashboard__hc">
-
-          </div>
-        </div> -->
-      <!-- </div> -->
     </div>
   </div>
 </template>
