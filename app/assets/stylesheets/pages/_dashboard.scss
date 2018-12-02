@@ -1,16 +1,72 @@
 .dashboard {
 
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__stages {
+    flex: 1;
+  }
+
+  &__cards {
+    display: flex;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__house {
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 5px;
+    height: 600px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    flex: 0 0 25%;
+    margin-left: 60px;
+    margin-top: 238px;
+    position: relative;
+
+    &-top {
+      padding: 20px;
+    }
+
+    &-header {
+      font-size: 20px;
+      padding-bottom: 7px;
+      text-align: center;
+      border-bottom: 1px solid black; 
+      margin-bottom: 30px;
+    }
+
+    &-info:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+
+    &-info {
+      font-size: 15px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
   &__bottom {
     display: flex;
   }
   &__info {
-    min-height: 70vh;
+    // min-height: 60vh;
+    height: 600px;
     background-color: white;
     margin-top: 40px;
     border-radius: 5px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     display: flex;
+    overflow: hidden;
     flex: 1;
+    margin-bottom: 200px;
   }
 
   &__secondary-info {
@@ -28,17 +84,27 @@
     border-left: 1px solid #F5F6FA;
     &-photo {
       // background-image: url('http://alau.kz/wp-content/uploads/2015/10/76bb22b747fbbe98822a35812baa2fa0.jpg');
-      height: 50%;
+      height: 100%;
       background-size: cover;
       background-position: center;
     }
 
     &-photo-2 {
-      // background-image: url('http://178.210.43.234:874/avreg-cgi/jpg/image.cgi?camera=2&ab=dmlld2VyOjE1OTc1Mw==&_=1543737832368');
-      height: 50%;
       background-size: cover;
       background-position: center;
+      // height: 100%;
+      margin-top: 82px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
+
+  }
+
+  &__picture {
+    // height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 
   }
 
@@ -49,7 +115,7 @@
   }
 
   &__description {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 2;
   }
 }
@@ -73,3 +139,30 @@
 // /* .slide-fade-leave-active below version 2.1.8 */ {
 // }
 
+.header_dashboard {
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-top: 50px;
+}
+
+.dashboard__piechart {
+    color: white;
+}
+
+.dashboard__progress {
+    background: linear-gradient(to right, #3AB988, #1FB552);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+
+    // &-text {
+    //     color: $color-white;
+    //     font-size: 1.8rem;
+    //     position: absolute;
+    //     top: 2rem;
+    //     left: 2rem;
+    // }
+}
