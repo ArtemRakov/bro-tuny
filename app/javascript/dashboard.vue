@@ -41,7 +41,7 @@
           <!-- <div class="dashboard__img"> -->
               <!-- <div class="dashboard__secondary-photo-2" :style="{'background-image': 'url(' + updateImage()  +  '+ )'}" >
               </div>  -->
-              <img class="dashboard__picture" src="http://178.210.43.234:874/avreg-cgi/jpg/image.cgi?camera=2&ab=dmlld2VyOjE1OTc1Mw==&_=1543737832368" alt="">
+              <img class="dashboard__picture" src="../assets/images/house.jpg" alt="">
             <!-- <piechart @progress="100"> </piechart> -->
           <!-- </div> -->
         </div>
