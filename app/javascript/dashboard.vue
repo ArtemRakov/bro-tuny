@@ -18,10 +18,12 @@
           <div class="dashboard__info" :key="activeTab.id">
             <div class="dashboard__main">
               <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
-              <p class="dashboard__description"> {{ activeTab.description }}  </p>
+              <p class="dashboard__description"> {{ activeTab.description }} </p>
             </div>
             <div class="dashboard__secondary">
-              <div class="dashboard__secondary-photo">
+              <div v-if="activeTab.photo" class="dashboard__secondary-photo" :style="{'background-image': 'url(http://172.21.47.224:8081/api/image/' + activeTab.photo  + ')'}">
+              </div>
+              <div class="dashboard__secondary-photo-2" :style="{'background-image': 'url(' + updateImage()  +  '+ )'}" >
               </div>
             </div>
           </div>   
@@ -48,6 +50,9 @@ export default {
         this.activeTab = stage
       }
     },
+    updateImage() {
+      return 'http://178.210.43.234:874/avreg-cgi/jpg/image.cgi?camera=2&ab=dmlld2VyOjE1OTc1Mw==&_=1543737832368'
+    },
     text_truncate(str, length, ending) {
       if (length == null) {
         length = 100;
@@ -61,6 +66,11 @@ export default {
         return str;
       }
     }
+  },
+  created() {
+    setTimeout(() => {
+      this.updateImage()
+    }, 1000);
   },
   computed: {
     sortedStages: function() {
