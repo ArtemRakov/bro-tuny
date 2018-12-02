@@ -12,21 +12,33 @@
           </li>
         </ul>
       </div>
-      <transition name="slide-fade" mode="out-in">
-        <div class="dashboard__info" :key="activeTab.id">
-          <div class="dashboard__main">
-            <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
-            <p class="dashboard__description"> {{ activeTab.description }}  </p>
-          </div>
-          <div class="dashboard__secondary">
-            <div class="dashboard__secondary-photo">
+
+
+      <!-- <div class="dashboard__bottom"> -->
+        <transition name="slide-fade" mode="out-in">
+          <div class="dashboard__info" :key="activeTab.id">
+            <div class="dashboard__main">
+              <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
+              <p class="dashboard__description"> {{ activeTab.description }}  </p>
             </div>
-            <div class="dashboard__secondary-photo-2">
+            <div class="dashboard__secondary">
+              <div class="dashboard__secondary-photo">
+              </div>
+              <div class="dashboard__secondary-photo-2">
+              </div>
             </div>
+          </div>   
+        </transition> 
+        <!-- <div class="dashboard__secondary-info">
+          <div class="dashboard__graph">
+
           </div>
-        </div>   
-      </transition> 
-      </div>
+          <div class="dashboard__hc">
+
+          </div>
+        </div> -->
+      <!-- </div> -->
+    </div>
   </div>
 </template>
 

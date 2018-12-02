@@ -1,4 +1,8 @@
 .dashboard {
+
+  &__bottom {
+    display: flex;
+  }
   &__info {
     min-height: 70vh;
     background-color: white;
@@ -6,6 +10,11 @@
     border-radius: 5px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     display: flex;
+    flex: 1;
+  }
+
+  &__secondary-info {
+    flex: 0 0 30%;
   }
 
   &__main {
