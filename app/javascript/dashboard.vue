@@ -21,12 +21,10 @@
                   <h2 class="dashboard__header"> {{ activeTab.title }} </h2>
                   <p class="dashboard__description" v-html="activeTab.description"> </p>
                 </div>
-                <div class="dashboard__secondary">
-                  <div v-if="activeTab.photo" class="dashboard__secondary-photo" :style="{'background-image': 'url(http://172.21.47.224:8081/api/image/' + activeTab.photo  + ')'}">
-                  </div>
-                  <!-- <div class="dashboard__secondary-photo-2" :style="{'background-image': 'url(' + updateImage()  +  '+ )'}" >
-                  </div> -->
-                </div>
+                  <!-- <div v-if="activeTab.photo" class="dashboard__secondary-photo" :style="{'background-image': 'url(http://172.21.47.224:8081/api/image/' + activeTab.photo  + ')'}">
+                  </div>  -->
+                  <img class="dashboard__bottom-img" :src="'http://172.21.47.224:8081/api/image/' + activeTab.photo"  alt="">
+                <!-- </div> -->
               </div>   
             </transition> 
         </div>
@@ -92,8 +90,11 @@ export default {
   },
   created() {
     const tab = this.stages.find(element => { return element.status === 'active' })
-    if (tab == undefined) {
-      this.activeTab = this.stages.first
+    if (tab != undefined) {
+      this.activeTab = tab
+    }
+    else {
+      this.activeTab = this.stages[0]
     }
   },
   computed: {
