@@ -5,7 +5,7 @@
       <div class="dashboard__cards">
         <div class="dashboard__stages">
             <ul class="progressbar">
-              <li  :class="{ active: stage.status === 'done' }" :key="stage.id" v-for="stage in sortedStages"> 
+              <li  :class="{ active: stage.status === 'done' }" :key="stage.id" v-for="stage in sortedStages">
                 <div @mouseover="changeTab(stage)"  :class="{ progressbar_dot_active: stage.status === 'done', progressbar_dot_orange: stage.status === 'active' }" class="progressbar_dot">  </div>
                 <div class="progressbar_active_tab"> {{ text_truncate(stage.title, 30) }}  </div>
                 <transition name="fade" mode="out-in">
@@ -25,17 +25,16 @@
                   </div>  -->
                   <img class="dashboard__bottom-img" :src="'http://172.21.47.224:8081/api/image/' + activeTab.photo"  alt="">
                 <!-- </div> -->
-              </div>   
-            </transition> 
+              </div>
+            </transition>
         </div>
         <div class="dashboard__house">
           <!-- <div class="dashboard__secondary-photo-2" :style="{'background-image': 'url(http://178.210.43.234:874/avreg-cgi/jpg/image.cgi?camera=2&ab=dmlld2VyOjE1OTc1Mw==&_=1543737832368)'}" > -->
           <!-- </div> -->
           <div class="dashboard__house-top">
             <h3 class="dashboard__house-header"> Информация о доме </h3>
-            <p class="dashboard__house-info"> Название: Чайка </p>
-            <p class="dashboard__house-info"> Адрес: Чайковского, 10 </p>
-            <p class="dashboard__house-info"> Дата окончания: 20.11.2020 </p>
+            <p class="dashboard__house-info"> Название: {{ houseComplex.name }} </p>
+            <p class="dashboard__house-info"> Адрес: {{ houseComplex.address }} </p>
           </div>
 
           <!-- <div class="dashboard__img"> -->
